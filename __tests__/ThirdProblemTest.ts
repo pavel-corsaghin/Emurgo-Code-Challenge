@@ -4,7 +4,7 @@ import {
   RecipientAccounts,
 } from '../problems/ThirdProblem';
 
-it('test third problem, case #1: Invalid transaction', () => {
+it('test third problem - Invalid transaction, case #1', () => {
   // Given
   const acc: ClosingAccount = {accountId: 'acc', amount: -1};
   const rec: RecipientAccounts = {accountId: 'rec', credit: 500};
@@ -15,14 +15,13 @@ it('test third problem, case #1: Invalid transaction', () => {
   };
 
   // Then
-  expect(t).toThrow(Error);
   expect(t).toThrow('Invalid transaction');
 });
 
-it('test third problem - Invalid transaction, case #1', () => {
+it('test third problem - Invalid transaction, case #2', () => {
   // Given
-  const acc: ClosingAccount = {accountId: 'acc', amount: -1};
-  const rec: RecipientAccounts = {accountId: 'rec', credit: 500};
+  const acc: ClosingAccount = {accountId: 'acc', amount: 500};
+  const rec: RecipientAccounts = {accountId: 'rec', credit: 0};
 
   // When
   const t = () => {
