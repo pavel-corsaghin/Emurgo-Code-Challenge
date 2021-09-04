@@ -1,4 +1,4 @@
-# emurgocodechallenge
+# Emurgo-Code-Challenge
 
 This project for Emurgo Code Challenge
 
